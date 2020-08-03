@@ -1,0 +1,16 @@
+/*
+没学过js，就用txt当后缀得了
+av706点赞
+F12进入Console复制以下代码（整体也行）
+*/
+inter = 10000;//10,000ms延迟
+i=1;//初始值
+var fun = () => {
+    document.getElementsByClassName('like')[i].click();//点 点赞 按钮
+    i=i+1;
+    if (i>=21){//翻页判定
+        document.getElementsByClassName('next')[0].click();//翻页（难免会有漏掉的，毕竟没学过js）
+        i=1;//恢复初始值
+    }
+};
+setInterval(fun, inter);
